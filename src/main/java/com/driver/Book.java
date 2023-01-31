@@ -14,13 +14,6 @@ public class Book {
 
      }
 
-     public Book(String name, String genre, String author) {
-          this.id +=id;
-          this.name = name;
-          this.genre = genre;
-          this.author = author;
-     }
-
      public int getId() {
           return id;
      }
