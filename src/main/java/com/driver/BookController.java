@@ -19,12 +19,7 @@ public class BookController {
         Book newbook = bookService.createBook(book);
         return new ResponseEntity<>(newbook, HttpStatus.CREATED);
     }
-//    @PostMapping("/create-book")
-//    public ResponseEntity createBook(@RequestParam("name") String name,@RequestParam("author") String author,@RequestParam("genre") String genre){
-//        Book book = new Book(name,author,genre);
-//        Book newBook = bookService.createBook(book);
-//        return new ResponseEntity<>(newBook,HttpStatus.CREATED);
-//    }
+
     @GetMapping("/get-book-by-id/{id}")
     public ResponseEntity findBookById(@PathVariable("id") String id){
         Book book = bookService.findBookById(id);

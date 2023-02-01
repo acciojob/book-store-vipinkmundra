@@ -7,13 +7,13 @@ import org.springframework.stereotype.Repository;
 public class BookRepository {
 
     HashMap<Integer,Book> hm = new HashMap<>();
+    private int id = 0;
     public BookRepository(){
 
     }
 
     public Book save(Book book){
-        int id = book.getId();
-        hm.put(id,book);
+        hm.put(++id,book);
         return book;
     }
 
